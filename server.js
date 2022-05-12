@@ -3,8 +3,6 @@ const { faker } = require('@faker-js/faker');
 const app = express();
 const port = 8000;
 
-app.listen(port, ()=>console.log("Listening to port : " + port));
-
 const createUser = () => {
     const newUser = {
         firstName: faker.name.firstName(),
@@ -49,3 +47,5 @@ app.get("/api/user/company", (req, res)=> {
     }
     res.json(both)
 })
+
+app.listen(port, ()=>console.log("Listening to port : " + port));
